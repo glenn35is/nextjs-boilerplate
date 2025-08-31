@@ -15,12 +15,12 @@ export default function Home() {
       label: "Starter Plan - 24 Hours"
     },
     {
-      hours: 168, // 1 week
+      hours: 168,
       sol: 0.5,
       label: "Weekly Plan - 7 Days"
     },
     {
-      hours: 720, // 1 month
+      hours: 720,
       sol: 1.5,
       label: "Monthly Plan - 30 Days"
     }
@@ -92,7 +92,6 @@ export default function Home() {
         </footer>
       </div>
 
-      {/* Payment Modal */}
       <PaymentProcessor
         isOpen={showPayment}
         onClose={() => setShowPayment(false)}
