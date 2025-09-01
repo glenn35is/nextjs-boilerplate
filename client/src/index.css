@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240 10% 3.9%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(240 10% 3.9%);
+  --card-foreground: hsl(0 0% 98%);
+  --popover: hsl(240 10% 3.9%);
+  --popover-foreground: hsl(0 0% 98%);
+  --primary: hsl(151 100% 55%);
+  --primary-foreground: hsl(240 10% 3.9%);
+  --secondary: hsl(240 3.7% 15.9%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(240 3.7% 15.9%);
+  --muted-foreground: hsl(240 5% 64.9%);
+  --accent: hsl(240 3.7% 15.9%);
+  --accent-foreground: hsl(0 0% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(240 3.7% 15.9%);
+  --input: hsl(240 3.7% 15.9%);
+  --ring: hsl(151 100% 55%);
+  --chart-1: hsl(151 100% 55%);
+  --chart-2: hsl(194 100% 50%);
+  --chart-3: hsl(254 100% 70%);
+  --chart-4: hsl(320 100% 50%);
+  --chart-5: hsl(42 100% 60%);
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.75rem;
+  
+  /* Neon colors */
+  --neon-green: hsl(151 100% 55%);
+  --neon-blue: hsl(194 100% 50%);
+  --neon-purple: hsl(254 100% 70%);
+  --neon-pink: hsl(320 100% 50%);
+  
+  /* Dark theme colors */
+  --dark-900: hsl(240 10% 6%);
+  --dark-800: hsl(240 8% 10%);
+  --dark-700: hsl(240 6% 14%);
+  --dark-600: hsl(240 4% 18%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-color: var(--dark-900);
+  }
+  
+  html {
+    @apply dark;
+  }
+}
+
+@layer components {
+  .glow-green {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+  }
+  
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  }
+  
+  .pulse-neon {
+    animation: pulse-neon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes pulse-neon {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4); 
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.6); 
+  }
+}
